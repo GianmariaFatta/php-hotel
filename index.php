@@ -39,7 +39,7 @@
         ],
 
     ];
-
+   
 ?>
 
 
@@ -63,39 +63,22 @@
     <div class="container">
     <table class="table">
  <tbody>
-     <tr>
-     <th scope="row">1</th>
-    <?php foreach($hotels as $hotel) : ?>
+ <?php foreach ($hotels as $index => $hotel) : ?>
+    <?php endforeach; ?>
+ <?php foreach ($hotel as $key => $value) : ?>
+     <th><?= $key?></th>
+     <?php endforeach; ?>
+     <?php foreach($hotels as $hotel) : ?>
+        <tr>
         <td><?= $hotel["name"]?></td>
-        <?php endforeach; ?>
-    </tr>
-    <tr>
-    <th scope="row">2</th>
-    <?php foreach($hotels as $hotel) : ?>
         <td><?= $hotel["description"]?></td>
-        <?php endforeach; ?>
-    </tr>
-    <tr>
-    <th scope="row">3</th>
-    <?php foreach($hotels as $hotel) : ?>
         <td><?= $hotel["parking"]?></td>
-        <?php endforeach; ?>
-    </tr>
-    <tr>
-    <th scope="row">4</th>
-    <?php foreach($hotels as $hotel) : ?>
         <td><?= $hotel["vote"]?></td>
-        <?php endforeach; ?>
-    </tr>
-    <tr>
-    <th scope="row">5</th>
-    <?php foreach($hotels as $hotel) : ?>
         <td><?= $hotel["distance_to_center"]?></td>
-        <?php endforeach; ?>
-    </tr>
-  </tbody>
+        </tr>
+    <?php endforeach; ?>
+</tbody>
 </table>
     </div>
-   <?php var_dump($hotels[0])?>
 </body>
 </html>

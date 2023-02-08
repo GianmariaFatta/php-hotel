@@ -61,6 +61,7 @@
 </head>
 <body>
     <div class="container">
+    <h1 class="mt-3 mb-5" >Hotels</h1>
     <table class="table">
  <tbody>
  <?php foreach ($hotels as $index => $hotel) : ?>
@@ -72,7 +73,7 @@
         <tr>
         <td><?= $hotel["name"]?></td>
         <td><?= $hotel["description"]?></td>
-        <td><?= $hotel["parking"]?></td>
+        <td><?= $hotel["parking"] ? "si" :"no"?></td>
         <td><?= $hotel["vote"]?></td>
         <td><?= $hotel["distance_to_center"]?></td>
         </tr>
